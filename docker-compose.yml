@@ -10,7 +10,9 @@ services:
     build: .
     volumes:
      - app_data:/tmp
-     
+    depends_on:
+     - redis  
+   
   redis:
     image: redis:alpine
     volumes:
